@@ -51,24 +51,30 @@ Adapun metode supervised learning yang digunakan adalah jenis klasifikasi yang a
 Model akhir yang kita gunakan adalah model Light Gradient Boosting Machine (LightGBM) yang sudah dilakukan tunning. 
 ![image](https://github.com/annachrn/BankMarketingCampaign/assets/150541362/c48e7d2e-872f-421e-a4ed-3a1a93f11dcc)
 
-Jika kita menggunakan model tersebut untuk menyaring/memilih nasabah untuk penawaran deposito, model tersebut dapat mengurangi 77% nasabah yang tidak tertarik melakukan deposito untuk kita approach dan 60% nasabah yang diprediksi tertarik untuk kita approach. Model kita ini memiliki ketepatan prediksi nasabah yang tertarik sebesar 68% (precisionnya), jadi setiap model kita memprediksi bahwa seorang nasabah itu tertarik, maka kemungkinan tebakannya benar itu sebesar 68%.
+Jika kita menggunakan model tersebut untuk menyaring/memilih nasabah untuk penawaran deposito, model tersebut dapat mengurangi 77% nasabah yang tidak tertarik melakukan deposito untuk kita approach dan 60% nasabah yang diprediksi tertarik untuk kita approach.
 
-> Analisis bisnis:
+Model kita ini memiliki ketepatan prediksi nasabah yang tertarik sebesar 68% (precisionnya), jadi setiap model kita memprediksi bahwa seorang nasabah itu tertarik, maka kemungkinan tebakannya benar itu sebesar 68%.
 
-Diasumsikan biaya pemasaran untuk satu pelanggan sekitar Rp50.000, kita memiliki total pelanggan 5343, di antaranya 2968 tidak ingin membuka rekening deposito dan 2375 ingin membuka rekening deposito.
+Analisis bisnis:
+
+Diasumsikan biaya pemasaran untuk satu pelanggan sekitar Rp50.000, kita memiliki total pelanggan 1000, di antaranya 500 tidak ingin membuka rekening deposito dan 500 ingin membuka rekening deposito, maka hitungannya kurang lebih akan seperti ini :
+
 
 **Tanpa Model:**
 
-Total pelanggan yang tidak tertarik membuka rekening deposito: 2968
-Total biaya pemasaran: 5343 x Rp50.000 = Rp267.150.000 (karena pemasaran dilakukan kepada semua pelanggan)
-Total biaya pemasaran yang terbuang sia-sia: 2968 x Rp50.000 = Rp148.400.000
+- Total Biaya => 1000 x Rp50.000 = Rp50.000.000
+- Total Nasabah Tertarik yang didapatkan => 1000 orang (karena semua nasabah ditawarkan)
+- Total Kandidat Tertarik yang tidak didapatkan => 0 orang (karena semua kita tawarkan)
+- Biaya yang terbuang => 500 x Rp50.000 = Rp25.000.000 (karena 500 orang menolak dan menjadi sia-sia)
 
 **Dengan Model:**
 
-Total pelanggan yang tidak tertarik membuka rekening deposito: 567 
-Total biaya pemasaran yang terbuang sia-sia: 567 x Rp50.000 = Rp28.350.000
-
-Perbedaan dari tanpa model: Rp120.050.000
+Dengan Model (hanya nasabah yang diprediksi oleh model tertarik yang kita check dan tawarkan) :
+- Total Biaya => (300 x Rp50.000) + (115 x Rp50.000) = Rp15.000.000 + Rp5.750.000 = Rp 20.750.0000
+- Total Kandidat Tertarik yang didapatkan => 300 orang (karena recall 1/yg tertarik itu 60%)
+- Total Kandidat Tertarik yang tidak didapatkan => 200 orang (karena recall 1/yg tertarik itu 60%)
+- Biaya yang terbuang => 115 x Rp50.000 =Rp5.750.000 (berdasarkan recall 0/yg tidak tertarik (115 orang menolak tawaran/tidak tertarik))
+- Jumlah penghematan => 77 x Rp50.000 = Rp3.850.000
 
 Berdasarkan perhitungan di atas, dapat disimpulkan bahwa dengan menggunakan model yang dibuat, bank dapat mengurangi biaya pemasaran dan potensi kerugian profit dari seorang pelanggan.
 
