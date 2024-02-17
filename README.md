@@ -41,6 +41,10 @@ Adapun metode supervised learning yang digunakan adalah jenis klasifikasi yang a
        setiap iterasi untuk memperbarui bobot model. Rentang nilai yang digunakan adalah [0.1, 0.075, 0.125, 0.05], yang akan dicoba  empat nilai yang berbeda untuk hyperparameter ini selama proses tuning.
    b. `model__estimators`: Ini adalah hyperparameter yang mengontrol jumlah estimator atau pohon dalam model ensemble. Jumlah estimator ini mempengaruhi kompleksitas model ensemble dan dapat memengaruhi 
        kinerjanya. Rentang nilai yang dipakai adalah [100,200, 300, 400, 500, 600, 700, 800, 900, 1000].
+   Pipeline model machine learning:
+
+   ![image](https://github.com/annachrn/BankMarketingCampaign/assets/150541362/464ca6ad-5624-4a3b-b365-b87c5a39d0cb)
+
    
 ### **Kesimpulan:**
 
