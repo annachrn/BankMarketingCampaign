@@ -19,5 +19,27 @@ Sebagai strategic marketing analyst, yang akan saya lakukan adalah membangun mod
 Saya akan membangun model dengan metode supervised learning karena datanya sudah memiliki label, dalam hal ini adalah deposit yang akan menjadi target label 
 Adapun metode supervised learning yang digunakan adalah jenis klasifikasi yang akan membantu perusahaan untuk dapat menganalisis efektivitas kampanye pemasaran sebelumnya dengan memeriksa jumlah kontak, waktu kontak, hasil kampanye sebelumnya, dan interaksi pelanggan.
 
+**Tahapan Pekerjaan:**
+1. Data understanding -> untuk memahami data
+2. Data cleaning -> untuk membersihkan data (seperti missing value, outlier)
+3. Data analysis -> suatu proses analisis data yang digunakan untuk menyelidiki berbagai fitur (variabel) dalam dataset, memahami strukturnya, mengidentifikasi pola, dan menarik kesimpulan awal (dari fitur numerikal dan kategorikal)
+4. Data preparation -> feature engineering dan feature scalling
+5. Modelling and evaluation
+   Membuat model menggunakan beberapa model untuk mencari model terbaik:
+   a. Logistic Regression
+   b. K-Nearest Neighbors (KNN)
+   c. Decision Trees
+   d. Random Forest
+   e. Extreme Gradient Boosting (XGB)
+   f. Light Gradient Boosting Machine (LGBM)
+
+   Melakukan hyperparamater tunning dan oversampling menggunakan RandomOverSampler.
+
+
+**Conclusion:**
+
+
+   
+
 
   
