@@ -76,6 +76,8 @@ Dengan Model (hanya nasabah yang diprediksi oleh model tertarik yang kita check 
 - Biaya yang terbuang => 115 x Rp50.000 =Rp5.750.000 (berdasarkan recall 0/yg tidak tertarik (115 orang menolak tawaran/tidak tertarik))
 - Jumlah penghematan => 77 x Rp50.000 = Rp3.850.000
 
+**Selisih tanpa model dan dengan model: 50.000.000 - 20.750.000 = Rp29.250.000**
+
 Berdasarkan perhitungan di atas, dapat disimpulkan bahwa dengan menggunakan model yang dibuat, bank dapat mengurangi biaya pemasaran dan potensi kerugian profit dari seorang pelanggan.
 
 Model ini dapat digunakan oleh:
